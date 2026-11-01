@@ -10,7 +10,9 @@ import {
   ApiMessage,
 } from './auth.models';
 
-const API_URL = 'http://localhost:10000/api';
+import { environment } from '../../../environments/environment.development';
+
+const API_URL = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root',
