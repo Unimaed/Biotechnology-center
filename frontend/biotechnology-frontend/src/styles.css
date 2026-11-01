@@ -1,0 +1,143 @@
+/* You can add global styles to this file, and also import other style files */
+/* =========================================
+   UNIVERSITY OF MAIDUGURI
+   BIOTECHNOLOGY CENTRE COLOUR SYSTEM
+========================================= */
+
+:root {
+  /* Official logo-inspired colours */
+  --primary-blue: #0098DB;
+  --primary-blue-dark: #006B9C;
+  --primary-blue-light: #E5F5FC;
+
+  --university-yellow: #FFF25E;
+  --university-yellow-dark: #E6D400;
+
+  --forest-green: #056E4C;
+  --forest-green-dark: #04241C;
+  --forest-green-light: #E8F4EE;
+
+  --charcoal-black: #151613;
+  --white: #FFFFFF;
+
+  /* Supporting colours */
+  --torch-red: #E53935;
+
+  /* General interface colours */
+  --page-background: #F7FAFC;
+  --surface-background: #FFFFFF;
+  --border-color: #E2E8F0;
+
+  --text-primary: #172B3A;
+  --text-secondary: #64748B;
+
+  /* Interaction */
+  --button-primary: var(--primary-blue);
+  --button-hover: var(--primary-blue-dark);
+
+  /* Shadows */
+  --card-shadow: 0 8px 28px rgba(0, 75, 110, 0.08);
+
+  /* Rounded corners */
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 18px;
+}
+
+/* Global reset */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: var(--page-background);
+  color: var(--text-primary);
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--forest-green);
+}
+
+/* Links */
+
+a {
+  color: var(--primary-blue-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--forest-green);
+}
+
+/* Primary buttons */
+
+button,
+.btn-primary {
+  font: inherit;
+}
+
+.btn-primary {
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--radius-small);
+  background: var(--primary-blue);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-blue-dark);
+}
+
+/* Cards */
+
+.card {
+  background: var(--surface-background);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--card-shadow);
+}
+
+/* Form controls */
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+/* Selection */
+
+::selection {
+  background: var(--university-yellow);
+  color: var(--charcoal-black);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}

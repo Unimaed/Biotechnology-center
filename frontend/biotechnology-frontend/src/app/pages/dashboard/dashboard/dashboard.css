@@ -1,0 +1,414 @@
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f8fa;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: #04241c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 8px 32px;
+}
+
+.brand-mark {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: #0098db;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 10px;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.brand small {
+  color: #c4d7cf;
+  font-size: 11px;
+}
+
+.sidebar-label {
+  color: #91aaa0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 18px 10px 9px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  color: #d8e8e0;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.nav-item.active {
+  background: #056e4c;
+  color: #fff;
+}
+
+.nav-item.disabled {
+  opacity: .72;
+  cursor: default;
+}
+
+.nav-item span {
+  width: 20px;
+  text-align: center;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 15px 8px 5px;
+  font-size: 11px;
+  color: #c4d7cf;
+  border-top: 1px solid #315044;
+}
+
+.online-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #65d69b;
+  margin-right: 7px;
+}
+
+/* Main area */
+
+.main-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  min-height: 85px;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 17px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.topbar h2 {
+  font-size: 19px;
+  margin: 0;
+  color: #056e4c;
+}
+
+.topbar p {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.logout-button {
+  padding: 10px 18px;
+  background: #fff;
+  color: #056e4c;
+  border: 1px solid #056e4c;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.logout-button:hover {
+  background: #056e4c;
+  color: #fff;
+}
+
+.page-content {
+  max-width: 1450px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* Welcome */
+
+.welcome-banner {
+  background: linear-gradient(110deg, #056e4c, #0098db);
+  border-radius: 14px;
+  color: #fff;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.welcome-banner .eyebrow {
+  color: #fff25e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.welcome-banner h1 {
+  color: #fff;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.welcome-banner p {
+  max-width: 600px;
+  margin: 0;
+  font-size: 14px;
+  color: #eaf7ff;
+}
+
+.welcome-icon {
+  font-size: 65px;
+}
+
+/* Account */
+
+.account-panel {
+  margin: 22px 0 35px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.account-avatar {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e5f5fc;
+  color: #006b9c;
+  font-weight: 800;
+}
+
+.account-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.account-details strong {
+  font-size: 13px;
+}
+
+.account-details span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.account-status {
+  margin-left: auto;
+  color: #056e4c;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Modules */
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.section-heading p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.module-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  padding: 22px;
+  min-height: 190px;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.module-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 75, 110, .09);
+}
+
+.module-icon {
+  font-size: 27px;
+}
+
+.module-card h3 {
+  font-size: 15px;
+  margin: 13px 0 6px;
+}
+
+.module-card p {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.7;
+  min-height: 40px;
+}
+
+.module-status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 9px;
+  border-radius: 20px;
+  background: #fff9c4;
+  color: #695d00;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Director notice */
+
+.director-notice {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 25px;
+  padding: 20px;
+  background: #e8f4ee;
+  border: 1px solid #c9e5d6;
+  border-radius: 10px;
+}
+
+.notice-icon {
+  font-size: 30px;
+}
+
+.director-notice h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.director-notice p {
+  margin: 0;
+  color: #456455;
+  font-size: 12px;
+}
+
+.dashboard-footer {
+  text-align: center;
+  padding: 35px 10px 10px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.dashboard-footer span {
+  display: block;
+  font-weight: 700;
+  color: #056e4c;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .module-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 65px;
+    min-width: 65px;
+    padding: 15px 8px;
+  }
+
+  .brand {
+    justify-content: center;
+    padding: 5px 0 25px;
+  }
+
+  .brand > div:last-child,
+  .sidebar-label,
+  .nav-item:not(.active),
+  .sidebar-footer {
+    display: none;
+  }
+
+  .nav-item.active {
+    justify-content: center;
+    font-size: 0;
+  }
+
+  .nav-item.active span {
+    font-size: 20px;
+  }
+
+  .topbar {
+    padding: 15px;
+  }
+
+  .topbar h2 {
+    font-size: 15px;
+  }
+
+  .topbar p {
+    font-size: 10px;
+  }
+
+  .page-content {
+    padding: 16px;
+  }
+
+  .welcome-banner {
+    padding: 23px;
+  }
+
+  .welcome-banner h1 {
+    font-size: 23px;
+  }
+
+  .welcome-icon {
+    font-size: 40px;
+  }
+
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+}

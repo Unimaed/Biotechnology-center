@@ -1,0 +1,452 @@
+
+<div class="public-site">
+  <!-- TOP INFORMATION BAR -->
+  <div class="top-strip">
+    <div class="container top-strip-content">
+      <span>University of Maiduguri</span>
+      <span>North East Nigeria</span>
+    </div>
+  </div>
+
+  <!-- HEADER AND NAVIGATION -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" routerLink="/" aria-label="Biotechnology Centre home">
+            <img
+        src="/images/logo.jpg"
+        alt="University of Maiduguri crest"
+        class="brand-logo"
+      >
+        <div class="brand-text">
+          <strong>BIOTECHNOLOGY CENTRE</strong>
+          <span>Centre of Excellence</span>
+          <small>University of Maiduguri</small>
+        </div>
+      </a>
+
+      <nav class="main-navigation" aria-label="Main navigation">
+        <a routerLink="/" class="active">Home</a>
+        <a href="#introduction">Introduction</a>
+        <a href="#history">History</a>
+        <a href="#mission-vision">Mission &amp; Vision</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#laboratory">Laboratory</a>
+        <a href="#protocols">Protocols</a>
+        <a href="#acacia">Acacia senegal</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="admin-link" routerLink="/login">Staff Login</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- AUTOMATIC HOMEPAGE SLIDESHOW -->
+    <section class="hero" aria-label="Biotechnology Centre highlights">
+
+      <div class="hero-image-slot" aria-live="off">
+        @for (slide of heroSlides; track slide.src; let i = $index) {
+          <img
+            [src]="slide.src"
+            [alt]="slide.alt"
+            [class.active]="i === currentSlide"
+            [attr.fetchpriority]="i === 0 ? 'high' : 'auto'"
+          >
+        }
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-actions">
+          <a href="#introduction" class="button-primary">
+            Discover the Centre
+          </a>
+          <a href="#facilities" class="button-outline">
+            Explore Our Facilities
+          </a>
+        </div>
+      </div>
+
+      <button
+        class="slide-control slide-previous"
+        type="button"
+        aria-label="Previous slide"
+        (click)="showPreviousSlide()"
+      >&#10094;</button>
+
+      <button
+        class="slide-control slide-next"
+        type="button"
+        aria-label="Next slide"
+        (click)="showNextSlide()"
+      >&#10095;</button>
+
+      <!-- SLIDE INDICATORS -->
+      <div class="slide-indicators" aria-label="Choose slideshow image">
+        @for (slide of heroSlides; track slide.src; let i = $index) {
+          <button
+            type="button"
+            [class.active]="i === currentSlide"
+            [attr.aria-label]="'Show slide ' + (i + 1)"
+            [attr.aria-pressed]="i === currentSlide"
+            (click)="goToSlide(i)"
+          ></button>
+        }
+      </div>
+
+      <div class="hero-bottom">
+        <div class="container hero-bottom-content">
+          <span>BIOTECHNOLOGY</span>
+          <span>RESEARCH</span>
+          <span>INNOVATION</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro-section reveal" id="introduction">
+      <div class="container intro-grid">
+        <div class="intro-visual">
+          <img
+            src="/images/slide2.jpg"
+            alt="North East Zonal Biotechnology Centre of Excellence"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="intro-content">
+          <span class="section-label">ABOUT THE CENTRE</span>
+          <h2>Introducing the Centre</h2>
+
+          <p>
+            The North East Zonal Biotechnology Centre of Excellence
+            is located at the University of Maiduguri, Maiduguri,
+            Borno State, Nigeria.
+          </p>
+
+          <p>
+            This section introduces the Centre, its establishment,
+            activities and contribution to biotechnology research.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORICAL BACKGROUND -->
+    <section class="history-section reveal" id="history">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">OUR HISTORY</span>
+          <h2>Historical Background</h2>
+          <p>The establishment and development of the Centre.</p>
+        </div>
+
+        <div class="history-content">
+          <article class="history-item">
+            <span class="history-year">2003</span>
+            <div>
+              <h3>Establishment of the Centre</h3>
+              <p>The Centre was established in 2003.</p>
+            </div>
+          </article>
+
+          <article class="history-item">
+            <span class="history-year">2010</span>
+            <div>
+              <h3>STEP-B Funding</h3>
+              <p>
+                STEP-B funding in 2010 marked an important
+                stage in the Centre's development.
+              </p>
+            </div>
+          </article>
+
+          <article class="director-profile">
+            <div class="director-photo-slot">
+              <img
+                src="/images/Slide3.jpg"
+                alt="Prof. Mustapha B. Abubakar, Serving Director"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="director-details">
+              <span class="director-label">CENTRE LEADERSHIP</span>
+              <h3>Prof. Mustapha B. Abubakar</h3>
+              <p>Serving Director</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION AND VISION -->
+    <section class="mission-section reveal" id="mission-vision">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">OUR DIRECTION</span>
+          <h2>Mission and Vision</h2>
+        </div>
+
+        <div class="mission-grid">
+          <article class="mission-card">
+            <div class="section-image-slot">
+              <img
+                src="/images/slide4.jpg"
+                alt="Our Mission"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="mission-card-content">
+              <h3>Our Mission</h3>
+              <p>The Centre's mission will be presented here.</p>
+            </div>
+          </article>
+
+          <article class="mission-card">
+            <div class="section-image-slot">
+              <img
+                src="/images/slide5.jpg"
+                alt="Our Vision"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="mission-card-content">
+              <h3>Our Vision</h3>
+              <p>The Centre's vision will be presented here.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACILITIES AND EQUIPMENT -->
+    <section class="facilities-section reveal" id="facilities">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">CENTRE INFRASTRUCTURE</span>
+          <h2>Facilities &amp; Equipment</h2>
+          <p>An overview of the Centre's facilities and equipment.</p>
+        </div>
+
+        <div class="facilities-grid">
+          <div class="facilities-main-image">
+            <div class="section-image-slot">
+              <img
+                src="/images/Slide55.jpg"
+                alt="Facilities and equipment"
+                loading="lazy"
+              >
+            </div>
+          </div>
+
+          <div class="facilities-side-images">
+            <div class="section-image-slot">
+              <img
+                src="/images/Slide11.jpg"
+                alt="Laboratory facilities"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="section-image-slot">
+              <img
+                src="/images/Slide12.jpg"
+                alt="Laboratory equipment"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANT TISSUE CULTURE LABORATORY -->
+    <section class="laboratory-section reveal" id="laboratory">
+      <div class="container intro-grid">
+        <div class="intro-content">
+          <span class="section-label">LABORATORY</span>
+          <h2>Plant Tissue Culture Laboratory</h2>
+        </div>
+
+        <div class="intro-visual">
+          <div class="section-image-slot">
+            <img
+              src="/images/Slide6.jpg"
+              alt="Plant Tissue Culture Laboratory"
+              loading="lazy"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MICROPROPAGATION PROTOCOLS -->
+    <section class="protocols-section reveal" id="protocols">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">RESEARCH AND DEVELOPMENT</span>
+          <h2>Micropropagation Protocols</h2>
+          <p>Micropropagation protocols developed by the Centre.</p>
+        </div>
+
+        <div class="protocols-grid">
+          <div class="protocols-image">
+            <div class="section-image-slot">
+              <img
+                src="/images/Slide7.jpg"
+                alt="Micropropagation protocols"
+                loading="lazy"
+              >
+            </div>
+          </div>
+
+          <div class="protocols-content">
+            <h3>Micropropagation Research</h3>
+
+            <p>
+              Efficient Micropropagation: Micropropagation and in vitro
+              protocols for promoting optimal growth and development
+              of plant tissues.
+            </p>
+
+            <p>
+              Mass Propagation Techniques: These protocols enable
+              the mass propagation of various plant species,
+              ensuring a consistent supply of healthy plants.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACACIA SENEGAL RESEARCH -->
+    <section class="acacia-section reveal" id="acacia">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">SPECIFIC RESEARCH PROJECT</span>
+          <h2>
+            Developing Micropropagation Protocol for
+            <em>Acacia senegal</em>
+          </h2>
+        </div>
+
+        <div class="acacia-grid">
+          <div class="acacia-image">
+            <div class="section-image-slot">
+              <img
+                src="/images/Slide8.jpg"
+                alt="Acacia senegal research"
+                loading="lazy"
+              >
+            </div>
+          </div>
+
+          <div class="acacia-content">
+            <h3>Micropropagation of <em>Acacia senegal</em></h3>
+
+            <p>
+              Development of Microbial Fertilizer Using Microbiome
+              Unique to Semi-arid and Arid Soils of the North-east
+              to Boost Agriculture and Fight Desertification
+              (NEDC-MCRP-Funded) - 2023-2024.
+            </p>
+
+            <p>
+              Developing Biofertilizers (Microbial Inoculants) for
+              the Restoration of Degraded Arid Soils in the North-east
+              to Fight Desertification and Boost Agriculture
+              (NRF-funded) 2021-2024.
+            </p>
+
+            <div class="section-image-slot">
+              <img
+                src="/images/Slide9.jpg"
+                alt="Acacia senegal plant"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section class="challenges-section reveal" id="challenges">
+      <div class="container challenges-grid">
+        <div class="challenges-content">
+          <span class="section-label">AREAS OF CONCERN</span>
+          <h2>Challenges</h2>
+          <p>This section highlights the challenges facing the Centre.</p>
+        </div>
+
+        <div class="challenges-images">
+          <div class="section-image-slot">
+            <img
+              src="/images/Slide10.jpg"
+              alt="Challenges facing the Centre"
+              loading="lazy"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT AND OFFICIAL ADDRESS -->
+    <section class="contact-section reveal" id="contact">
+      <div class="container contact-content">
+        <div>
+          <span class="section-label">GET IN TOUCH</span>
+          <h2>Contact the Centre</h2>
+
+          <p>
+            North East Zonal Biotechnology Centre of Excellence,
+            University of Maiduguri.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <strong>North East Zonal Biotechnology Centre of Excellence</strong>
+          <span>University of Maiduguri</span>
+
+          <address>
+            PMB 1069<br>
+            Bama Road, Maiduguri<br>
+            Borno State, Nigeria
+          </address>
+
+          <a
+            href="https://www.unimaid.edu.ng/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            University of Maiduguri Website
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>BIOTECHNOLOGY CENTRE</strong>
+        <p>University of Maiduguri</p>
+        <small>
+          PMB 1069, Bama Road, Maiduguri, Borno State, Nigeria
+        </small>
+      </div>
+
+      <span>
+        © {{ year }} North East Zonal Biotechnology Centre of Excellence.
+        All rights reserved.
+      </span>
+    </div>
+  </footer>
+</div>

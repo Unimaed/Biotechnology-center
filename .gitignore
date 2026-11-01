@@ -1,0 +1,36 @@
+﻿# Environment files and secrets
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Angular build and cache
+.angular/
+**/.angular/
+dist/
+**/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local backups and database dumps
+/backups/
+*.sql
+*.dump
+*.backup
+
+# IDE files
+.vscode/
+.idea/

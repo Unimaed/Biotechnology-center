@@ -1,0 +1,134 @@
+
+<div class="admin-layout">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">BC</div>
+      <div>
+        <strong>BIOTECHNOLOGY</strong>
+        <small>Centre of Excellence</small>
+      </div>
+    </div>
+
+    <div class="sidebar-label">MAIN MENU</div>
+
+    <nav>
+      <a class="nav-item active" routerLink="/dashboard">
+        <span>▦</span>
+        Dashboard Overview
+      </a>
+
+      <div class="sidebar-label">CENTRE MANAGEMENT</div>
+
+      @for (module of modules; track module.title) {
+        <div class="nav-item disabled">
+          <span>{{ module.icon }}</span>
+          {{ module.title }}
+        </div>
+      }
+
+      @if (auth.admin()?.role === 'centre_director') {
+        <div class="sidebar-label">ADMINISTRATION</div>
+        <div class="nav-item disabled">
+          <span>⚙</span>
+          Administrator Accounts
+        </div>
+        <div class="nav-item disabled">
+          <span>📋</span>
+          Audit Logs
+        </div>
+      }
+    </nav>
+
+    <div class="sidebar-footer">
+      <span class="online-dot"></span>
+      Internal Administration
+    </div>
+  </aside>
+
+  <main class="main-area">
+
+    <header class="topbar">
+      <div>
+        <h2>Administration Dashboard</h2>
+        <p>North East Zonal Biotechnology Centre of Excellence</p>
+      </div>
+
+      <button class="logout-button" (click)="logout()">
+        Sign Out
+      </button>
+    </header>
+
+    <section class="page-content">
+
+      <div class="welcome-banner">
+        <div>
+          <span class="eyebrow">INTERNAL ADMINISTRATION</span>
+          <h1>Welcome back</h1>
+          <p>
+            Manage the Centre's website, research information
+            and institutional activities from one place.
+          </p>
+        </div>
+
+        <div class="welcome-icon">🧬</div>
+      </div>
+
+      @if (auth.admin(); as admin) {
+        <section class="account-panel">
+          <div class="account-avatar">
+            {{ admin.role === 'centre_director' ? 'CD' : 'AD' }}
+          </div>
+
+          <div class="account-details">
+            <strong>{{ admin.email }}</strong>
+            <span>
+              {{ admin.role === 'centre_director'
+                ? 'Centre Director'
+                : 'Administrator' }}
+            </span>
+          </div>
+
+          <span class="account-status">Active session</span>
+        </section>
+      }
+
+      <div class="section-heading">
+        <div>
+          <h2>Centre Management</h2>
+          <p>Access the Centre's administrative modules.</p>
+        </div>
+      </div>
+
+      <div class="module-grid">
+        @for (module of modules; track module.title) {
+          <article class="module-card">
+            <div class="module-icon">{{ module.icon }}</div>
+            <h3>{{ module.title }}</h3>
+            <p>{{ module.description }}</p>
+            <span class="module-status">{{ module.status }}</span>
+          </article>
+        }
+      </div>
+
+      @if (auth.admin()?.role === 'centre_director') {
+        <section class="director-notice">
+          <div class="notice-icon">🛡️</div>
+          <div>
+            <h3>Centre Director Access</h3>
+            <p>
+              You have full administrative privileges, including
+              administrator account management and security oversight.
+            </p>
+          </div>
+        </section>
+      }
+
+      <footer class="dashboard-footer">
+        North East Zonal Biotechnology Centre of Excellence
+        <span>University of Maiduguri</span>
+      </footer>
+
+    </section>
+  </main>
+</div>
