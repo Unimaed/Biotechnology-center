@@ -11,6 +11,7 @@ import authRoutes from './modules/auth/auth.routes.js';
 import adminUserRoutes from './modules/admin-users/admin-users.routes.js';
 
 const app = express();
+app.set('trust proxy', 1);
 
 const PORT = Number(process.env.PORT || 10000);
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:4200';
