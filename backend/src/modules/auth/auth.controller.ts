@@ -42,6 +42,13 @@ export async function loginController(
     : 0,
 });
   const validation = loginSchema.safeParse(req.body);
+  
+  if (!validation.success) {
+  console.error(
+    'LOGIN VALIDATION ERRORS:',
+    JSON.stringify(validation.error.issues, null, 2)
+  );
+}
 
   if (!validation.success) {
     res.status(400).json({
