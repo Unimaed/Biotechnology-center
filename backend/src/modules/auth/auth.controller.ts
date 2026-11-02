@@ -28,6 +28,19 @@ export async function loginController(
   req: Request,
   res: Response,
 ): Promise<void> {
+
+  console.log('LOGIN REQUEST DIAGNOSTIC:', {
+  bodyType: typeof req.body,
+  bodyIsObject: req.body !== null && typeof req.body === 'object',
+  hasEmail: typeof req.body?.email === 'string',
+  hasPassword: typeof req.body?.password === 'string',
+  emailLength: typeof req.body?.email === 'string'
+    ? req.body.email.length
+    : 0,
+  passwordLength: typeof req.body?.password === 'string'
+    ? req.body.password.length
+    : 0,
+});
   const validation = loginSchema.safeParse(req.body);
 
   if (!validation.success) {
