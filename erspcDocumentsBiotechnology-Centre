@@ -1,0 +1,59 @@
+[1mdiff --git a/frontend/biotechnology-frontend/angular.json b/frontend/biotechnology-frontend/angular.json[m
+[1mindex 1794b87..e38ae0f 100644[m
+[1m--- a/frontend/biotechnology-frontend/angular.json[m
+[1m+++ b/frontend/biotechnology-frontend/angular.json[m
+[36m@@ -30,19 +30,26 @@[m
+           },[m
+           "configurations": {[m
+             "production": {[m
+[31m-              "budgets": [[m
+[31m-                {[m
+[31m-                  "type": "initial",[m
+[31m-                  "maximumWarning": "2MB",[m
+[31m-                  "maximumError": "2.5MB"[m
+[31m-                },[m
+[31m-                {[m
+[31m-                  "type": "anyComponentStyle",[m
+[31m-                  "maximumWarning": "350kB",[m
+[31m-                  "maximumError": "400kB"[m
+[31m-                }[m
+[31m-              ],[m
+[31m-              "outputHashing": "all"[m
+[32m+[m[32m  "fileReplacements": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "replace": "src/environments/environment.development.ts",[m
+[32m+[m[32m      "with": "src/environments/environment.ts"[m
+[32m+[m[32m    }[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  "budgets": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "type": "initial",[m
+[32m+[m[32m      "maximumWarning": "2MB",[m
+[32m+[m[32m      "maximumError": "2.5MB"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m      "type": "anyComponentStyle",[m
+[32m+[m[32m      "maximumWarning": "350kB",[m
+[32m+[m[32m      "maximumError": "400kB"[m
+[32m+[m[32m    }[m
+[32m+[m[32m  ],[m
+[32m+[m[32m  "outputHashing": "all"[m
+[32m+[m[32m},[m
+             },[m
+             "development": {[m
+               "optimization": false,[m
+[1mdiff --git a/frontend/biotechnology-frontend/src/app/core/auth/auth.service.ts b/frontend/biotechnology-frontend/src/app/core/auth/auth.service.ts[m
+[1mindex fc367bb..ec3821f 100644[m
+[1m--- a/frontend/biotechnology-frontend/src/app/core/auth/auth.service.ts[m
+[1m+++ b/frontend/biotechnology-frontend/src/app/core/auth/auth.service.ts[m
+[36m@@ -10,7 +10,9 @@[m [mimport {[m
+   ApiMessage,[m
+ } from './auth.models';[m
+ [m
+[31m-const API_URL = 'http://localhost:10000/api';[m
+[32m+[m[32mimport { environment } from '../../../environments/environment.development';[m
+[32m+[m
+[32m+[m[32mconst API_URL = environment.apiUrl;[m
+ [m
+ @Injectable({[m
+   providedIn: 'root',[m
