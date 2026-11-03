@@ -59,9 +59,30 @@ app.use('/api/admin-users', adminUserRoutes);
 
 async function startServer(): Promise<void> {
   try {
-    await pool.query('SELECT 1');
+   await pool.query('SELECT 1');
 
-    app.listen(PORT, () => {
+const diagnostic = await pool.query(`
+  SELECT
+    current_database() AS database_name,
+    current_schema() AS current_schema,
+    current_setting('search_path') AS search_path,
+    to_regclass('public.admin_users') AS admin_users,
+    to_regclass('public.schema_migrations') AS migration_table
+`);
+
+console.log('DATABASE DIAGNOSTIC:', diagnostic.rows[0]);
+
+if (diagnostic.rows[0].migration_table) {
+  const migrations = await pool.query(`
+    SELECT filename, applied_at
+    FROM public.schema_migrations
+    ORDER BY filename
+  `);
+
+  console.log('DATABASE MIGRATION HISTORY:', migrations.rows);
+}
+
+app.listen(PORT, () => {
       console.log('---------------------------------------');
       console.log('Biotechnology Centre Backend');
       console.log(`Server: http://localhost:${PORT}`);
