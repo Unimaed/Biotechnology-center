@@ -12,11 +12,11 @@
   <header class="site-header">
     <div class="container header-content">
       <a class="brand" routerLink="/" aria-label="Biotechnology Centre home">
-            <img
-        src="/images/logo.jpg"
-        alt="University of Maiduguri crest"
-        class="brand-logo"
-      >
+        <img
+          src="/images/logo.jpg"
+          alt="University of Maiduguri crest"
+          class="brand-logo"
+        >
         <div class="brand-text">
           <strong>NORTH EAST ZONAL BIOTECHNOLOGY <br>CENTRE OF EXCELLENCE</strong>
           <small>University of Maiduguri</small>
@@ -30,9 +30,16 @@
         <a href="#mission-vision">Mission &amp; Vision</a>
         <a href="#facilities">Facilities</a>
         <a href="#laboratory">Laboratory</a>
+        <a href="#molecular-biology">Molecular Biology</a>
+        <a href="#microscopy">Microscopy</a>
+        <a href="#postgraduate-research">Postgraduate Research</a>
+        <a href="#training">Training</a>
+        <a href="#biosafety">Biosafety</a>
         <a href="#protocols">Protocols</a>
         <a href="#acacia">Acacia senegal</a>
         <a href="#challenges">Challenges</a>
+        <a href="#programmes">Programmes</a>
+        <a href="#partnerships">Partnerships</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -43,7 +50,6 @@
   <main>
     <!-- AUTOMATIC HOMEPAGE SLIDESHOW -->
     <section class="hero" aria-label="Biotechnology Centre highlights">
-
       <div class="hero-image-slot" aria-live="off">
         @for (slide of heroSlides; track slide.src; let i = $index) {
           <img
@@ -82,7 +88,6 @@
         (click)="showNextSlide()"
       >&#10095;</button>
 
-      <!-- SLIDE INDICATORS -->
       <div class="slide-indicators" aria-label="Choose slideshow image">
         @for (slide of heroSlides; track slide.src; let i = $index) {
           <button
@@ -118,13 +123,11 @@
         <div class="intro-content">
           <span class="section-label">ABOUT THE CENTRE</span>
           <h2>Introducing the Centre</h2>
-
           <p>
             The North East Zonal Biotechnology Centre of Excellence
             is located at the University of Maiduguri, Maiduguri,
             Borno State, Nigeria.
           </p>
-
           <p>
             This section introduces the Centre, its establishment,
             activities and contribution to biotechnology research.
@@ -170,7 +173,6 @@
                 loading="lazy"
               >
             </div>
-
             <div class="director-details">
               <span class="director-label">CENTRE LEADERSHIP</span>
               <h3>Prof. Mustapha B. Abubakar</h3>
@@ -198,10 +200,15 @@
                 loading="lazy"
               >
             </div>
-
             <div class="mission-card-content">
               <h3>Our Mission</h3>
-              <p>To develop the field of Biotechnology and related research activities in the University and to support the development of the vast bioresource potentials and need orientated Biotechnology research in the North-East Region.</p>
+              <p>
+                To develop the field of Biotechnology and related
+                research activities in the University and to support
+                the development of the vast bioresource potentials
+                and need orientated Biotechnology research in the
+                North-East Region.
+              </p>
             </div>
           </article>
 
@@ -213,10 +220,14 @@
                 loading="lazy"
               >
             </div>
-
             <div class="mission-card-content">
               <h3>Our Vision</h3>
-              <p>The Centre aims to serve as a link and co-ordinating Centre for the various units of the University and the North-East Region in Biotechnology Research and Development.</p>
+              <p>
+                The Centre aims to serve as a link and co-ordinating
+                Centre for the various units of the University and
+                the North-East Region in Biotechnology Research
+                and Development.
+              </p>
             </div>
           </article>
         </div>
@@ -251,7 +262,6 @@
                 loading="lazy"
               >
             </div>
-
             <div class="section-image-slot">
               <img
                 src="/images/Slide12.jpg"
@@ -271,7 +281,6 @@
           <span class="section-label">LABORATORY</span>
           <h2>Plant Tissue Culture Laboratory</h2>
         </div>
-
         <div class="intro-visual">
           <div class="section-image-slot">
             <img
@@ -280,6 +289,322 @@
               loading="lazy"
             >
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCED AND SKILLED STAFF -->
+    <section class="staff-section reveal" id="staff">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">OUR PEOPLE</span>
+          <h2>Experienced and Skilled Staff</h2>
+          <div class="image-placeholder">
+              <img
+                src="/images/Slide43.jpg"
+                alt="Advanced Microscopy"
+                loading="lazy"
+              ></div>
+          <p>
+            Our Centre is supported by experienced and skilled
+            personnel committed to biotechnology research,
+            laboratory services, scientific training and innovation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOLECULAR BIOLOGY LABORATORY -->
+    <section class="molecular-section reveal" id="molecular-biology">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">RESEARCH FACILITIES</span>
+          <h2>Molecular Biology Laboratory</h2>
+          <p>
+            The Centre provides molecular biology facilities and
+            technical services to support scientific research,
+            molecular investigations and advanced biotechnology.
+          </p>
+        </div>
+
+        <div class="molecular-grid">
+
+          <!-- DNA AND RNA EXTRACTION -->
+          <article class="molecular-card">
+             <div class="image-placeholder">
+              <img
+                src="/images/Slide38.jpg"
+                alt="DNA RNA"
+                loading="lazy"
+              ></div>
+
+            <h3>DNA and RNA Extraction and Quantification</h3>
+            <p>
+              Extraction, isolation and quantification of DNA and RNA
+              for molecular biology research and analysis.
+            </p>
+          </article>
+
+          <!-- CONVENTIONAL AND REAL-TIME PCR -->
+          <article class="molecular-card">
+              <div class="image-placeholder">
+              <img
+                src="/images/Slide39.jpg"
+                alt="CONVENTIONAL AND REAL-TIME PCR"
+                loading="lazy"
+              ></div>
+
+            <h3>Conventional and Real-Time PCR</h3>
+            <p>
+              Molecular amplification and analysis using conventional
+              PCR and real-time PCR techniques.
+            </p>
+          </article>
+
+          <!-- GEL ELECTROPHORESIS AND GENE CLONING -->
+          <article class="molecular-card">
+             <div class="image-placeholder">
+              <img
+                src="/images/Slide40.jpg"
+                alt="GEL ELECTROPHORESIS AND GENE CLONING"
+                loading="lazy"
+              ></div>
+
+            <h3>Gel Electrophoresis and Gene Cloning</h3>
+            <p>
+              Molecular separation, analysis and gene cloning
+              techniques supporting biotechnology research.
+            </p>
+          </article>
+
+          <!-- SEQUENCING SERVICES -->
+          <article class="molecular-card">
+              <div class="image-placeholder">
+              <img
+                src="/images/Slide41.jpg"
+                alt="SEQUENCING SERVICES"
+                loading="lazy"
+              ></div>
+
+            <h3>Sequencing Services</h3>
+            <p>
+              Sequence-related services supporting molecular
+              characterization and research investigations.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MICROSCOPY FACILITIES -->
+    <section class="microscopy-section reveal" id="microscopy">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">SCIENTIFIC EQUIPMENT</span>
+          <h2>Basic and Advanced Microscopy Facilities</h2>
+          <p>
+            Microscopy facilities supporting biological observation,
+            sample examination and advanced research activities.
+          </p>
+        </div>
+
+        <div class="microscopy-grid">
+          <article class="microscopy-card">
+           <div class="image-placeholder">
+              <img
+                src="/images/Slide13.jpg"
+                alt="Basic Microscopy"
+                loading="lazy"
+              ></div>
+            <h3>Basic Microscopy</h3>
+            <p>
+              Microscopy facilities for routine observation,
+              examination and biological research.
+            </p>
+          </article>
+
+          <article class="microscopy-card">
+            <div class="image-placeholder">
+              <img
+                src="/images/Slide42.jpg"
+                alt="Advanced Microscopy"
+                loading="lazy"
+              ></div>
+            <h3>Advanced Microscopy</h3>
+            <p>
+              Advanced microscopic facilities supporting
+              detailed biological investigations.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- POSTGRADUATE RESEARCH SUPPORT -->
+    <section class="postgraduate-section reveal" id="postgraduate-research">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">ACADEMIC AND RESEARCH SUPPORT</span>
+          <h2>Supporting Postgraduate Research</h2>
+          <p>
+            The Centre supports postgraduate research through access
+            to biotechnology facilities, laboratory techniques,
+            scientific equipment and technical guidance.
+          </p>
+        </div>
+
+        <div class="postgraduate-grid">
+          <div class="image-placeholder">
+              <img
+                src="/images/Slide17.jpg"
+                alt="SEQUENCING SERVICES"
+                loading="lazy"
+              ></div>
+          <div class="image-placeholder">
+              <img
+                src="/images/Slide18.jpg"
+                alt="Advanced Microscopy"
+                loading="lazy"
+              ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKSHOPS AND TRAINING -->
+    <section class="training-section reveal" id="training">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">CAPACITY DEVELOPMENT</span>
+          <h2>Workshops and Training Programmes</h2>
+          <p>
+            Practical workshops and training opportunities designed
+            to develop laboratory skills, scientific knowledge
+            and practical biotechnology experience.
+          </p>
+        </div>
+
+        <div class="training-grid">
+          <article class="training-card">
+            <div class="image-placeholder">
+              <img
+                src="/images/Slide20.jpg"
+                alt="Advanced Microscopy"
+                loading="lazy"
+              ></div>
+            <h3>Molecular Techniques Training</h3>
+            <p>
+              Practical training in molecular biology techniques
+              and modern biotechnology laboratory procedures.
+            </p>
+          </article>
+
+          <article class="training-card">
+            <div class="image-placeholder">
+              <img
+                src="/images/Slide23.jpg"
+                alt="Advanced Microscopy"
+                loading="lazy"
+              ></div>
+            <h3>ITF and NYSC Training</h3>
+            <p>
+              Training opportunities and practical laboratory
+              exposure for Industrial Training Fund (ITF) students
+              and National Youth Service Corps (NYSC) members.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIOSAFETY AND BIOLOGICAL WASTE -->
+    <section class="biosafety-section reveal" id="biosafety">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">LABORATORY SAFETY</span>
+          <h2>Biosafety and Biorisk Management</h2>
+          <p>
+            Promoting responsible laboratory practices, biosafety
+            awareness and effective biological risk management.
+          </p>
+        </div>
+
+        <div class="biosafety-grid">
+          <article class="biosafety-card">
+            <h3>Biosafety and Biorisk Management Programme</h3>
+            <p>
+              Supporting awareness, training and responsible
+              management of biological risks in laboratory
+              and research environments.
+            </p>
+          </article>
+
+          <article class="biosafety-card">
+            <h3>Biological Waste Support Items</h3>
+            <p>
+              Supporting appropriate biological waste handling
+              through relevant waste management materials,
+              supplies and safety items.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNAL SUPPORT AND PARTNERSHIPS -->
+    <section class="partnership-section reveal" id="partnerships">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">COLLABORATION</span>
+          <h2>Internal Support and Partnerships</h2>
+          <p>
+            Promoting institutional cooperation, shared research
+            resources and partnerships that advance biotechnology
+            research, training and innovation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC PROGRAMMES AND SPECIAL PROJECTS -->
+    <section class="programmes-section reveal" id="programmes">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">ACADEMIC OPPORTUNITIES</span>
+          <h2>M.Sc. in Biotechnology Programme</h2>
+          <p>
+            Highlighting postgraduate academic opportunities in
+            biotechnology and the role of the Centre in supporting
+            advanced research and practical laboratory experience.
+          </p>
+        </div>
+
+        <div class="programmes-grid">
+          <article class="programme-card">
+            <h3>M.Sc. in Biotechnology</h3>
+            <p>
+              A postgraduate programme focused on biotechnology
+              knowledge, research and practical scientific skills.
+            </p>
+          </article>
+
+          <article class="programme-card">
+            <h3>Special Projects</h3>
+            <p>
+              Showcasing special research projects, scientific
+              initiatives and development activities undertaken
+              or supported by the Centre.
+            </p>
+          </article>
+
+          <article class="programme-card">
+            <h3>Future Prospects</h3>
+            <p>
+              Highlighting opportunities for future growth,
+              research expansion, innovation, capacity development
+              and strategic collaboration.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -306,13 +631,11 @@
 
           <div class="protocols-content">
             <h3>Micropropagation Research</h3>
-
             <p>
               Efficient Micropropagation: Micropropagation and in vitro
               protocols for promoting optimal growth and development
               of plant tissues.
             </p>
-
             <p>
               Mass Propagation Techniques: These protocols enable
               the mass propagation of various plant species,
@@ -347,21 +670,18 @@
 
           <div class="acacia-content">
             <h3>Micropropagation of <em>Acacia senegal</em></h3>
-
             <p>
               Development of Microbial Fertilizer Using Microbiome
               Unique to Semi-arid and Arid Soils of the North-east
               to Boost Agriculture and Fight Desertification
               (NEDC-MCRP-Funded) - 2023-2024.
             </p>
-
             <p>
               Developing Biofertilizers (Microbial Inoculants) for
               the Restoration of Degraded Arid Soils in the North-east
               to Fight Desertification and Boost Agriculture
               (NRF-funded) 2021-2024.
             </p>
-
             <div class="section-image-slot">
               <img
                 src="/images/Slide9.jpg"
@@ -380,7 +700,12 @@
         <div class="challenges-content">
           <span class="section-label">AREAS OF CONCERN</span>
           <h2>Challenges</h2>
-          <p>Funding: Major funding has been from charges for research consumables and bench fees.   High cost of reagents & Consumables a with attending high cost of shipment   Equipment upgrade, calibration and maintenance   Power supply .</p>
+          <p>
+            Funding: Major funding has been from charges for research
+            consumables and bench fees. High cost of reagents and
+            consumables, including high shipping costs. Equipment
+            upgrade, calibration and maintenance. Power supply.
+          </p>
         </div>
 
         <div class="challenges-images">
@@ -401,7 +726,6 @@
         <div>
           <span class="section-label">GET IN TOUCH</span>
           <h2>Contact the Centre</h2>
-
           <p>
             North East Zonal Biotechnology Centre of Excellence,
             University of Maiduguri.
@@ -411,13 +735,11 @@
         <div class="contact-card">
           <strong>North East Zonal Biotechnology Centre of Excellence</strong>
           <span>University of Maiduguri</span>
-
           <address>
             PMB 1069<br>
             Bama Road, Maiduguri<br>
             Borno State, Nigeria
           </address>
-
           <a
             href="https://www.unimaid.edu.ng/"
             target="_blank"
@@ -435,7 +757,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div>
-        <strong>NORTH EAST ZONAL BIOTECHNOLOGY CENTRE OF EXCEELENCE </strong>
+        <strong>NORTH EAST ZONAL BIOTECHNOLOGY CENTRE OF EXCELLENCE</strong>
         <p>University of Maiduguri</p>
         <small>
           PMB 1069, Bama Road, Maiduguri, Borno State, Nigeria
