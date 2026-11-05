@@ -33,6 +33,13 @@ export class PublicHome implements AfterViewInit, OnDestroy {
       title: 'Modern Laboratory Facilities',
       description: 'Supporting practical research, training and scientific discovery.',
     },
+
+      {
+      src: '/images/images.jpg',
+      alt: 'Acacia senegal plant research',
+      title: 'Plant Research and Development',
+      description: 'Supporting sustainable agricultural research.',
+    },
    
     {
       src: '/images/Slide55.jpg',

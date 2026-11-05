@@ -1612,3 +1612,88 @@
     transition-duration: .01ms !important;
   }
 }
+
+
+/* =========================================
+   BIOINFORMATICS LABORATORY GALLERY
+========================================= */
+
+.gallery-section {
+  padding: 85px 0;
+  background: #fff;
+}
+
+.gallery-section .section-heading {
+  max-width: 850px;
+}
+
+.gallery-section .gallery-caption {
+  max-width: 750px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.gallery-item {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #edf3f2;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease, filter .5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+  filter: brightness(.9);
+}
+
+/* TABLET GALLERY */
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .gallery-item {
+    height: 250px;
+  }
+}
+
+/* MOBILE GALLERY */
+
+@media (max-width: 700px) {
+  .gallery-section {
+    padding: 60px 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gallery-item {
+    height: 250px;
+  }
+
+  .gallery-section .gallery-caption {
+    font-size: 14px;
+  }
+}
