@@ -1697,3 +1697,54 @@
     font-size: 14px;
   }
 }
+
+
+/* UNIVERSITY LOGO AND VICE-CHANCELLOR PORTRAIT */
+.brand-emblems {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.unimaid-logo-holder,
+.vice-chancellor-photo-holder {
+  width: 68px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid #d6b45a;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.vice-chancellor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+  .brand-emblems {
+    gap: 7px;
+  }
+
+  .unimaid-logo-holder,
+  .vice-chancellor-photo-holder {
+    width: 49px;
+    height: 57px;
+  }
+}
+
