@@ -1,6 +1,6 @@
 /* =========================================
    BIOTECHNOLOGY CENTRE - COMPLETE HOMEPAGE
-   Clean image styling - no placeholder borders
+   Sky Blue and Forest Green Theme
 ========================================= */
 
 :host {
@@ -37,7 +37,7 @@
 }
 
 .public-site section {
-  scroll-margin-top: 115px;
+  scroll-margin-top: 125px;
 }
 
 .container {
@@ -46,7 +46,7 @@
 }
 
 /* =========================================
-   TOP BAR
+   TOP INFORMATION BAR
 ========================================= */
 
 .top-strip {
@@ -65,7 +65,10 @@
 }
 
 /* =========================================
-   HEADER
+   HEADER - THREE COLUMN LAYOUT
+   LEFT: UNIVERSITY LOGO
+   CENTRE: CENTRE NAME AND NAVIGATION
+   RIGHT: VC PORTRAIT AND STAFF LOGIN
 ========================================= */
 
 .site-header {
@@ -79,65 +82,95 @@
 }
 
 .header-content {
-  min-height: 92px;
-  display: flex;
-  justify-content: space-between;
+  width: min(1450px, 96%);
+  min-height: 125px;
+  margin: 0 auto;
+  padding: 12px 0;
+
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) 105px;
   align-items: center;
   gap: 20px;
 }
 
+/* UNIVERSITY LOGO - FAR LEFT */
+
+.unimaid-logo-holder {
+  width: 78px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+  background: #fff;
+  border: 2px solid #d6b45a;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.unimaid-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* CENTRE COLUMN */
+
+.header-centre {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* CENTRE BRAND NAME */
+
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
+  justify-content: center;
+  text-align: center;
   text-decoration: none;
-}
-
-.brand-logo {
-  width: 65px;
-  height: 72px;
-  object-fit: contain;
+  min-width: 0;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.4;
+  align-items: center;
+  line-height: 1.35;
 }
 
 .brand-text strong {
   color: var(--forest-green);
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 800;
-  letter-spacing: .4px;
-}
-
-.brand-text span {
-  color: var(--sky-blue);
-  font-size: 12px;
-  font-weight: 700;
+  letter-spacing: .6px;
 }
 
 .brand-text small {
   color: #555;
   font-size: 11px;
+  font-weight: 600;
 }
 
-/* NAVIGATION */
+/* MAIN NAVIGATION */
 
 .main-navigation {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 5px 16px;
 }
 
 .main-navigation a {
   position: relative;
-  padding: 10px 0;
+  padding: 7px 0;
   color: #333;
   font-size: 11px;
   font-weight: 650;
@@ -154,7 +187,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 3px;
+  bottom: 2px;
   height: 2px;
   width: 0;
   background: var(--sky-blue);
@@ -166,20 +199,54 @@
   width: 100%;
 }
 
+/* RIGHT HEADER COLUMN */
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* VICE-CHANCELLOR PORTRAIT */
+
+.vice-chancellor-photo-holder {
+  width: 72px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 3px;
+  background: #fff;
+  border: 2px solid #d6b45a;
+  border-radius: 8px;
+}
+
+.vice-chancellor-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
 /* STAFF LOGIN */
 
 .admin-link {
-  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 11px 18px;
+  flex-shrink: 0;
+  padding: 7px 12px;
   border-radius: 5px;
   background: var(--sky-blue);
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .admin-link:hover {
@@ -445,7 +512,6 @@
 
 /* =========================================
    SHARED IMAGE STYLING
-   No dashed borders or placeholder outlines
 ========================================= */
 
 .public-site .image-placeholder {
@@ -698,6 +764,56 @@
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
+}
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery-section {
+  padding: 85px 0;
+  background: #fff;
+}
+
+.gallery-section .section-heading {
+  max-width: 850px;
+}
+
+.gallery-section .gallery-caption {
+  max-width: 750px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.gallery-item {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #edf3f2;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease, filter .5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+  filter: brightness(.9);
 }
 
 /* =========================================
@@ -1239,19 +1355,37 @@
 }
 
 /* =========================================
-   TABLET
+   LARGE TABLET AND SMALL DESKTOP
 ========================================= */
 
 @media (max-width: 1100px) {
   .header-content {
-    flex-wrap: wrap;
-    padding: 12px 0;
+    width: 96%;
+    grid-template-columns: 72px minmax(0, 1fr) 85px;
+    gap: 12px;
+    min-height: 115px;
+  }
+
+  .unimaid-logo-holder {
+    width: 65px;
+    height: 73px;
+  }
+
+  .vice-chancellor-photo-holder {
+    width: 60px;
+    height: 65px;
+  }
+
+  .brand-text strong {
+    font-size: 16px;
   }
 
   .main-navigation {
-    order: 3;
-    flex-basis: 100%;
-    justify-content: flex-start;
+    gap: 4px 11px;
+  }
+
+  .main-navigation a {
+    font-size: 10px;
   }
 
   .hero {
@@ -1265,12 +1399,54 @@
 }
 
 /* =========================================
-   TABLET - NEW SECTION GRIDS
+   TABLET
 ========================================= */
 
 @media (max-width: 900px) {
+  .header-content {
+    grid-template-columns: 65px minmax(0, 1fr) 75px;
+    gap: 10px;
+    min-height: 110px;
+  }
+
+  .unimaid-logo-holder {
+    width: 58px;
+    height: 65px;
+  }
+
+  .vice-chancellor-photo-holder {
+    width: 55px;
+    height: 60px;
+  }
+
+  .brand-text strong {
+    font-size: 14px;
+  }
+
+  .main-navigation {
+    gap: 3px 10px;
+  }
+
+  .main-navigation a {
+    font-size: 9px;
+  }
+
+  .admin-link {
+    font-size: 9px;
+    padding: 6px 9px;
+  }
+
   .programmes-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .gallery-item {
+    height: 250px;
   }
 }
 
@@ -1279,50 +1455,84 @@
 ========================================= */
 
 @media (max-width: 700px) {
+
   .top-strip {
     font-size: 10px;
   }
 
+  /* HEADER MOBILE LAYOUT */
+
   .header-content {
-    gap: 10px;
+    width: 96%;
+    min-height: auto;
+    padding: 10px 0;
+    grid-template-columns: 48px minmax(0, 1fr) 58px;
+    align-items: start;
+    gap: 7px;
+  }
+
+  .unimaid-logo-holder {
+    width: 45px;
+    height: 52px;
+    padding: 2px;
+    border-width: 1px;
+  }
+
+  .header-centre {
+    gap: 7px;
+    padding-top: 2px;
   }
 
   .brand {
-    gap: 8px;
-  }
-
-  .brand-logo {
-    width: 46px;
-    height: 52px;
+    width: 100%;
   }
 
   .brand-text strong {
     font-size: 10px;
-  }
-
-  .brand-text span {
-    font-size: 9px;
+    letter-spacing: .1px;
+    line-height: 1.3;
   }
 
   .brand-text small {
     font-size: 8px;
   }
 
-  .admin-link {
-    padding: 9px 11px;
-    font-size: 10px;
+  .header-right {
+    gap: 5px;
   }
 
+  .vice-chancellor-photo-holder {
+    width: 43px;
+    height: 48px;
+    padding: 2px;
+    border-width: 1px;
+  }
+
+  .admin-link {
+    padding: 5px 6px;
+    font-size: 8px;
+    border-radius: 4px;
+  }
+
+  /* MOBILE NAVIGATION */
+
   .main-navigation {
+    width: 100%;
+    display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-start;
     overflow-x: auto;
-    gap: 16px;
-    padding: 5px 0 10px;
+    overflow-y: hidden;
+    gap: 14px;
+    padding: 5px 2px 9px;
     scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
   }
 
   .main-navigation a {
-    font-size: 11px;
+    flex: 0 0 auto;
+    font-size: 10px;
+    padding: 5px 0;
   }
 
   /* MOBILE SLIDESHOW */
@@ -1545,6 +1755,25 @@
     height: 200px;
     min-height: 200px;
   }
+
+  /* MOBILE GALLERY */
+
+  .gallery-section {
+    padding: 60px 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gallery-item {
+    height: 250px;
+  }
+
+  .gallery-section .gallery-caption {
+    font-size: 14px;
+  }
 }
 
 /* =========================================
@@ -1552,17 +1781,40 @@
 ========================================= */
 
 @media (max-width: 380px) {
-  .brand-logo {
+
+  .header-content {
+    grid-template-columns: 40px minmax(0, 1fr) 50px;
+    gap: 5px;
+  }
+
+  .unimaid-logo-holder {
     width: 38px;
-    height: 45px;
+    height: 44px;
+  }
+
+  .vice-chancellor-photo-holder {
+    width: 38px;
+    height: 43px;
   }
 
   .brand-text strong {
     font-size: 9px;
   }
 
+  .brand-text small {
+    font-size: 7px;
+  }
+
   .admin-link {
-    padding: 8px;
+    padding: 5px 4px;
+    font-size: 7px;
+  }
+
+  .main-navigation {
+    gap: 12px;
+  }
+
+  .main-navigation a {
     font-size: 9px;
   }
 
@@ -1612,139 +1864,3 @@
     transition-duration: .01ms !important;
   }
 }
-
-
-/* =========================================
-   BIOINFORMATICS LABORATORY GALLERY
-========================================= */
-
-.gallery-section {
-  padding: 85px 0;
-  background: #fff;
-}
-
-.gallery-section .section-heading {
-  max-width: 850px;
-}
-
-.gallery-section .gallery-caption {
-  max-width: 750px;
-  margin: 0 auto;
-  color: #555;
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.gallery-item {
-  position: relative;
-  height: 270px;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #edf3f2;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
-  cursor: pointer;
-}
-
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .5s ease, filter .5s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.07);
-  filter: brightness(.9);
-}
-
-/* TABLET GALLERY */
-
-@media (max-width: 900px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .gallery-item {
-    height: 250px;
-  }
-}
-
-/* MOBILE GALLERY */
-
-@media (max-width: 700px) {
-  .gallery-section {
-    padding: 60px 0;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .gallery-item {
-    height: 250px;
-  }
-
-  .gallery-section .gallery-caption {
-    font-size: 14px;
-  }
-}
-
-
-/* UNIVERSITY LOGO AND VICE-CHANCELLOR PORTRAIT */
-.brand-emblems {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-
-.unimaid-logo-holder,
-.vice-chancellor-photo-holder {
-  width: 68px;
-  height: 76px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: #fff;
-  border: 2px solid #d6b45a;
-  border-radius: 8px;
-  padding: 3px;
-}
-
-.brand-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.vice-chancellor-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 5px;
-}
-
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 600px) {
-  .brand-emblems {
-    gap: 7px;
-  }
-
-  .unimaid-logo-holder,
-  .vice-chancellor-photo-holder {
-    width: 49px;
-    height: 57px;
-  }
-}
-
